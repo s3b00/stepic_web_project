@@ -21,8 +21,8 @@ from qa import views as qav
 urlpatterns = [
     re_path('admin/', admin.site.urls),
     path('', qav.get_new, name='news'),
-    re_path('login/', qav.test),
-    re_path('signup/', qav.test),
+    re_path('login/', qav.login, name='login'),
+    re_path('signup/', qav.register, name="register"),
     re_path(r'question/(?P<pk>\d+)/', qav.get_question, name='question_detail'),
     re_path('ask/', qav.ask, name='add_ask'),
     re_path('popular/', qav.populars, name='populars'),
